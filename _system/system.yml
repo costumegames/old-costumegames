@@ -1,0 +1,22 @@
+content:
+    title: Pages
+    icon: sitemap
+events:
+    title: Events
+    icon: calendar
+    items:
+        events:
+            title: Events
+            icon: calendar
+        venues:
+            title: Venues
+            icon: map-marker
+gallery:
+    title: Gallery
+    icon: camera
+sponsors:
+    title: Sponsors
+    icon: money
+contacts:
+    title: Contacts
+    icon: users

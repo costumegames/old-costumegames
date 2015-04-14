@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{% include modules/banner.html %}
+
+<div class="section" id="content">
+  <div class="container">
+    {% include template/content.html %}
+    <br>
+    <div class="row equal">
+      {% assign venues = (site.venues | where: 'published', 1 | sort: 'order') %}
+      {% for venue in venues %}
+      {% assign events = (site.events | where: 'parent', nil | where: 'published', 1 | where: 'area', venue.slug | sort: page.sort_events) %}
+      {% if events[0] %}
+      <div class="col-sm-6 col-md-4">
+        <div class="box bg-pattern-2">
+          <h3 class="media-heading">{{ venue.title }}</h3>
+          <hr>
+          <ul class="media-list">
+            {% for event in events %}
+            <li class="media"><a href="{{ site.url }}{{ event.url }}">
+              <!--div class="media-left">
+                <div class="datebox"><span>{{ event.start_date | date:'%d' }}<small>{{ event.start_date | date:'%b' }}</small></span></div>
+              </div-->
+              <div class="media-body">
+                <h4 class="media-heading">{{ event.title }}</h4>
+              </div>
+            </a>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

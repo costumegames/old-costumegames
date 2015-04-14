@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{% assign slides = (site.events | where: 'published', 1 | sort: page.sort_slides) %}
+{% include modules/carousel.html category=slides %}
+
+  <div class="section text-center" id="content">
+    <div class="container">
+      <h1 class="page-header">{{ page.title }}</h1>
+      {% include template/content.html %}
+      <br>
+      <h3 class="media-heading">Sponsored by</h3>
+      {% assign sponsors = (site.sponsors | where: 'published', 1 | sort: 'order') %}
+      {% include module module="sponsors" title="Sponsors" items=sponsors style="raw" %}
+    </div>
+  </div>
+  
+  <div class="black section bg-pattern-1">
+    <div class="container">
+      <a href="{{ site.url }}/tickets.html" class="btn btn-danger btn-lg pull-right">Buy Tickets</a>
+      <div class="datebox pull-right" id="countdown" data-date="{{ page.countdown | date: "%Y-%m-%d"}}"></div>
+      <span class="text-lg">{{ page.festival_date }}</span>
+    </div>
+  </div>
+  {% assign events = (site.events | where: 'parent', nil | where: 'published', 1 | sort: page.sort_events) %}
+  {% include module module="gallery" class="grey" title="Events" items=events %} 
+  
+  {% assign venues = (site.venues | where: 'published', 1 | sort: 'order') %}
+  {% include module module="gallery" class="red bg-pattern-1" title="Venues" items=venues %}
+  
