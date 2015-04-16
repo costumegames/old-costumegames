@@ -41,12 +41,6 @@ defaults:
     -
         scope:
             path: ''
-            type: venues
-        values:
-            layout: venue
-    -
-        scope:
-            path: ''
             type: events
         values:
             layout: event

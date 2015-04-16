@@ -8,9 +8,6 @@ events:
         events:
             title: Events
             icon: calendar
-        venues:
-            title: Venues
-            icon: map-marker
 gallery:
     title: Gallery
     icon: camera
