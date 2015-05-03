@@ -1,1 +1,0 @@
-Brighton Japan Festival

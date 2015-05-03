@@ -2,9 +2,6 @@ title: 'The Costume Games'
 permalink: none
 url: 'https://thecostumegames.com'
 timezone: Europe/London
-exclude:
-    - Gemfile
-    - Gemfile.lock
 analytics:
     provider: google_analytics
     tracking_id: UA-36947515-1
@@ -56,12 +53,12 @@ collections:
         permalink: ':path.html'
     events:
         output: true
-    venues:
-        output: true
+    slides:
+        output: false
     gallery:
         output: true
     sponsors:
-        output: true
+        output: false
     contacts:
         output: true
 description: 'The Costume Games'

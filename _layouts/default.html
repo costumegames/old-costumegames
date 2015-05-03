@@ -57,7 +57,6 @@
           <li {% if item.slug == page.slug or page.collection == item.slug or page.app == item.slug or page.parent == item.slug %}class="active"{% endif %}>
             <a href="{{ site.url }}{{ item.url | replace: 'index.html', '' }}">
               {% if item.slug == 'index' %}Home{% else %}{{ item.title }}{% endif %}
-              <small>{{ item.japanese }}</small>
             </a>
           </li>
         {% endfor %}
