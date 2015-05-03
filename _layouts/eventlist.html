@@ -8,7 +8,7 @@ layout: default
     {% include template/content.html %}
     <br>
     <div class="row equal">
-      {% assign venues = (site.events | group_by: 'date' | where: 'published', 1 | sort: 'order') %}
+      {% assign venues = (site.events | group_by: 'start_date' | where: 'published', 1 | sort: 'order') %}
       {% for venue in venues %}
       {% assign events = (site.events | where: 'published', 1 | sort: page.sort_events) %}
       {% if events[0] %}
