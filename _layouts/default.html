@@ -36,8 +36,8 @@
   </head>
   <body data-spy="scroll" data-target=".navbar-inverse">
   <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-  <div id="nav" class="navbar navbar-inverse affix-top {% if page.slug == 'index' %}navbar-bottom{% endif %}" role="navigation">
-    <div class="container">
+  <div id="nav" class="navbar navbar-inverse affix{% unless page.collection contains 'shop' or page.slug contains 'shop' %}-top"{% endunless %} role="navigation">
+    <div class="text-center">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -45,27 +45,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button> 
-         <a class="navbar-brand brand-small" href="{{site.url}}">
-          <img src="{{site.url}}/assets/logo_small.png" alt="{{ site.title }}" id="logo" />
-        </a>
+        <a class="navbar-brand" href="{{site.url}}"><img src="{{site.url}}/assets/logo.png" alt="{{ site.title }}" id="logo" /></a>
       </div>
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-        
+        <ul class="nav navbar-nav nav-left">
         {% assign pages = (site.content | where: 'published', 1 | where: 'parent', nil | sort: 'order') %}
         {% for item in pages %}
-          <li {% if item.slug == page.slug or page.collection == item.slug or page.app == item.slug or page.parent == item.slug %}class="active"{% endif %}>
-            <a href="{{ site.url }}{{ item.url | replace: 'index.html', '' }}">
+          {% assign pagecount = forloop.length | divided_by: 2 %}
+          {% if forloop.index > pagecount and navsplit == nil %}
+          {% assign navsplit = 1 %}
+        </ul>
+        <ul class="nav navbar-nav nav-right">
+          {% endif %}
+          <li {% if item.slug == page.slug or page.collection contains item.slug %}class="active"{% endif %}>
+            <a href="{{site.url}}{{ item.url }}">
               {% if item.slug == 'index' %}Home{% else %}{{ item.title }}{% endif %}
             </a>
           </li>
         {% endfor %}
-        
         </ul>
       </div>
-      <!--/.nav-collapse -->
     </div>
-  </div>
   {{content}}
   
   <footer>
