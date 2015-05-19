@@ -52,6 +52,19 @@
 }
 
 @media (min-width: 768px) {
+    
+    .navbar .nav {
+        position: absolute;
+        margin: 0 120px;
+    }
+    .navbar .nav-left {
+        right: 50%;
+        margin-left: 0 !important;
+    }
+    .navbar .nav-right {
+        left: 50%;
+        margin-right: 0 !important;
+    }
     .navbar-inverse .navbar-nav>li>a small {
         display: block;
     }
