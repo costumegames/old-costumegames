@@ -51,8 +51,11 @@
     }
 }
 
+.navbar .navbar-header {
+    float: none;
+    display: inline-block;
+}
 @media (min-width: 768px) {
-    
     .navbar .nav {
         position: absolute;
         margin: 0 120px;
