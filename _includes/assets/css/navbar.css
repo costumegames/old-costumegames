@@ -5,18 +5,6 @@
     z-index: 1030;
     margin: 0;
 }
-.brand-big {
-    display: none;
-}
-.navbar .brand-small {
-    padding: 5px 15px;
-}
-.brand-small img {
-    max-width: 100%;
-    position: absolute;
-    height: 30px;
-    margin-top: 5px;
-}
 .navbar-inverse {
     background-color: #000;
 }
@@ -31,20 +19,8 @@
     background-color: #c00;
     /*text-shadow: 0px 1px 1px #000, 1px 0px 1px #000, 0px -1px 1px #000, -1px 0px 1px #000;*/
 }
-.navbar-inverse .navbar-nav>li>a small {
-    font-weight: normal;
-}
 
-@media (max-width: 767px) {
-    .navbar .brand-small {
-        max-width: 80%;
-    }
-}
 @media (min-width: 768px) and (max-width: 992px) {
-    .brand-small img {
-        height: 20px;
-        margin-top: 10px;
-    }
     .navbar-inverse .navbar-nav>li>a {
         padding-left: 10px;
         padding-right: 10px;
@@ -56,28 +32,43 @@
     display: inline-block;
 }
 @media (min-width: 768px) {
+    .navbar-brand img {
+        height: 186px;
+        margin-top: -15px;
+    }
+    .navbar.affix .navbar-brand img {
+        height: 120px;
+        margin-top: -20px;
+        background: #000;
+        border-radius: 50%;
+        padding: 10px;
+    }
+    .navbar-bottom .navbar-brand img {
+        margin-top: -140px;
+    }
     .navbar .nav {
         position: absolute;
-        margin: 0 120px;
+        top: 13px;
+    }
+    .navbar.affix .nav {
+        top: 3px;
     }
     .navbar .nav-left {
         right: 50%;
-        margin-left: 0 !important;
+        margin-right: 100px;
     }
     .navbar .nav-right {
         left: 50%;
-        margin-right: 0 !important;
+        margin-left: 100px;
+    }
+    .navbar.affix .nav-left {
+        margin-right: 67px;
+    }
+    .navbar.affix .nav-right {
+        margin-left: 67px;
     }
     .navbar-inverse .navbar-nav>li>a small {
         display: block;
-    }
-    .brand-big {
-        display: block;
-        padding-top: 79px;
-    }
-    .navbar .brand-small {
-        padding: 15px;
-        height: 70px;
     }
     .navbar.affix-top {
         position: absolute;
@@ -88,10 +79,6 @@
     .navbar.affix-top.navbar-bottom{
         top: auto;
         bottom: 0;
-    }
-    .navbar .nav {
-        float: right;
-        margin-right: -15px;
     }
     .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
         color: #f00 !important;

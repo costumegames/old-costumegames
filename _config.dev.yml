@@ -1,0 +1,74 @@
+title: 'The Costume Games'
+permalink: none
+url: 'http://abemedia.koding.io/clients/costumegames/_site/'
+timezone: Europe/London
+analytics:
+    provider: google_analytics
+    tracking_id: UA-36947515-1
+sharing:
+    provider:
+        - facebook
+        - twitter
+        - google
+        - linkedin
+        - pinterest
+        - stumbleupon
+    limit: '3'
+profiles:
+    provider:
+        - facebook
+        - twitter
+        - pinterest
+    facebook: 'https://facebook.com/brightonjapanfestival'
+    twitter: 'https://twitter.com/brightonjapan15'
+    pinterest: 'https://pinterest.com/brightonjapan'
+defaults:
+    -
+        scope:
+            path: ''
+            type: posts
+        values:
+            layout: page
+    -
+        scope:
+            path: ''
+            type: pages
+        values:
+            layout: page
+    -
+        scope:
+            path: ''
+            type: events
+        values:
+            layout: event
+    -
+        scope:
+            path: ''
+            type: gallery
+        values:
+            layout: gallery
+collections:
+    content:
+        output: true
+        permalink: ':path.html'
+    events:
+        output: true
+    slides:
+        output: false
+    gallery:
+        output: true
+    sponsors:
+        output: false
+    contacts:
+        output: true
+description: 'The Costume Games'
+relative_permalinks: 'false'
+recaptcha_public_key: 6Lf55v0SAAAAAMh0yq9KLInjidvwlAJRP-MYBVND
+comments:
+    provider: '1'
+    num_posts: 0
+    width: 0
+v: 1a
+baseurl: /
+cdn: //cdn.abemedia.co.uk/0x0/costumegames/
+ticket_sales: 0

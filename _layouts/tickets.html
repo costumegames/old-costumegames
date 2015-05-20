@@ -7,6 +7,31 @@ layout: default
   <div class="container">
     {% include template/content.html %}
     <br>
+    
+        <form role="form" class="form-inline" action="https://send.donlabs.com/KQ" method="post" id="contactForm">
+          <div class="well">
+            <h3 class="page-header">Get notified when tickets are available</h3>
+            <div class="form-group">
+              <input type="hidden" name="event" id="event" value="n/a" />
+              <label class="sr-only" for="name">Name*</label>
+              <input type="text" name="name" id="name" placeholder="Name*" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="email">Email*</label>
+              <input type="email" name="email" id="email" placeholder="Email*" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="phone">Mobile</label>
+              <input type="phone" name="phone" id="phone" placeholder="Mobile" class="form-control" />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-danger">Notify me!</button>
+            </div>
+            <div>
+              <small>* required</small>
+            </div>
+          </div>
+        </form>
     <div class="row">
       {% assign items = site.events | where: 'published', 1 | sort: 'start_date' %}
       {% for item in items %}{% if item.price and item.ticket %}

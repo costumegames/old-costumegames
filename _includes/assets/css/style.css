@@ -373,7 +373,7 @@ a.box-red:hover {
 }
 .arrow-down {
     position: absolute;
-    bottom: 80px;
+    bottom: 180px;
     color: #fff;
     font-size: 56px;
     text-align: center;
