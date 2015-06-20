@@ -19,9 +19,9 @@ profiles:
         - facebook
         - twitter
         - pinterest
-    facebook: 'https://facebook.com/brightonjapanfestival'
-    twitter: 'https://twitter.com/brightonjapan15'
-    pinterest: 'https://pinterest.com/brightonjapan'
+    facebook: 'https://facebook.com/thecostumegames'
+    twitter: 'https://twitter.com/thecostumegames'
+    pinterest: 'https://pinterest.com/thecostumegames'
 defaults:
     -
         scope:
@@ -72,3 +72,14 @@ v: 2
 baseurl: /
 cdn: //cdn.abemedia.co.uk/0x0/costumegames/
 ticket_sales: 0
+advanced:
+    xs_w: 263
+    xs_h: 0
+    sm_w: 432
+    sm_h: 0
+    md_w: 800
+    md_h: 0
+    lg_w: 1280
+    lg_h: 0
+    xl_w: 1920
+    xl_h: 0
